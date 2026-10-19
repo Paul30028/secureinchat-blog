@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>什么是零知识架构？普通人也能懂的隐私通信原理 - SecureInChat</title>
+<meta name="description" content="用通俗语言解释零知识架构、盲中继协议和端到端加密如何保护你的聊天内容不被服务器读取。">
+<style>body{font-family:-apple-system,sans-serif;max-width:800px;margin:0 auto;padding:20px;line-height:1.75;color:#222}h1{font-size:1.7rem}h2{margin-top:2em;font-size:1.3rem}.meta{color:#666;font-size:0.95rem;margin-bottom:1.5em}a{color:#0066cc}</style>
+</head>
+<body>
+<p><a href="/">← 返回首页</a></p>
+<h1>什么是零知识架构？普通人也能懂的隐私通信原理</h1>
+<div class="meta">2026-10-19 · 隐私基础</div>
+
+<p>在传统即时通讯工具中，服务器通常能看到你的消息内容，或者至少保存加密后的副本。零知识架构（Zero-Knowledge Architecture）的核心目标是：即使服务器被完全控制，攻击者也无法读取任何用户消息。</p>
+
+<h2>为什么需要零知识？</h2>
+<p>数据泄露、政府请求、内部人员滥用，这些风险在中心化服务中真实存在。真正的隐私通信要求「服务器什么都不知道」。</p>
+
+<h2>盲中继（Blind Relay）是怎么工作的</h2>
+<p>在盲中继模型中：</p>
+<ul>
+<li>消息在用户设备上完成加密（端到端加密）</li>
+<li>服务器只负责转发已经加密的数据包</li>
+<li>服务器看不到明文，也无法将消息与真实身份强绑定</li>
+<li>消息送达后不在服务器长期保存</li>
+</ul>
+
+<p>这就像邮局只负责传递密封的信件，但永远打不开信封，也不记录寄信人和收信人的详细身份。</p>
+
+<h2>端到端加密（E2EE）的关键点</h2>
+<p>密钥交换通常使用 Curve25519 等现代椭圆曲线算法，结合 HKDF 派生会话密钥，再用 AES-256-GCM 进行认证加密。只有通信双方持有解密密钥，服务器全程只看到密文。</p>
+
+<h2>普通人可以怎么做</h2>
+<ol>
+<li>选择支持真正端到端加密且宣称零知识/无日志的工具</li>
+<li>验证开源与安全审计情况</li>
+<li>避免在不必要的场景使用会扫描内容的云服务</li>
+<li>定期检查应用权限与设备安全</li>
+</ol>
+
+<p>零知识不是营销口号，而是可验证的架构选择。理解它的基本原理，能帮助你在众多「隐私」产品中做出更明智的判断。</p>
+
+<p><a href="/">← 返回首页</a></p>
+</body>
+</html>
