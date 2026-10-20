@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://secureinchat-blog.xtwy606.workers.dev/sitemap.xml
